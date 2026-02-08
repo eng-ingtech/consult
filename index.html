@@ -16,59 +16,25 @@
             --muted: #94a3b8;
         }
 
-        .theme-emerald {
-            --primary: #10b981;
-            --secondary: #059669;
-            --accent: #f97316;
-        }
-
-        .theme-rose {
-            --primary: #f43f5e;
-            --secondary: #e11d48;
-            --accent: #8b5cf6;
-        }
-
-        .theme-amber {
-            --primary: #f59e0b;
-            --secondary: #d97706;
-            --accent: #ec4899;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
         body {
             font-family: 'Noto Sans Arabic', 'Inter', sans-serif;
             background-color: var(--background);
             color: var(--text);
             line-height: 1.6;
             overflow-x: hidden;
-            transition: all 0.3s ease;
         }
 
-        /* Scroll Progress */
         .scroll-progress {
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 3px;
+            position: fixed; top: 0; left: 0; height: 3px;
             background: linear-gradient(90deg, var(--primary), var(--secondary));
-            z-index: 9999;
-            transition: width 0.1s;
+            z-index: 9999; transition: width 0.1s;
         }
 
-        /* Navigation */
         nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            padding: 1.5rem 0;
-            transition: all 0.3s ease;
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+            padding: 1.5rem 0; transition: all 0.3s ease;
         }
 
         nav.scrolled {
@@ -78,1124 +44,509 @@
             padding: 1rem 0;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
 
-        .nav-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+        .nav-content { display: flex; justify-content: space-between; align-items: center; }
 
         .logo {
-            font-size: 1.8rem;
-            font-weight: 700;
+            font-size: 1.8rem; font-weight: 700;
             background: linear-gradient(135deg, var(--primary), var(--secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
         }
 
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
 
         .nav-links a {
-            color: var(--muted);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s;
-            position: relative;
+            color: var(--muted); text-decoration: none; font-weight: 500;
+            transition: color 0.3s; position: relative;
         }
 
-        .nav-links a:hover {
-            color: var(--text);
-        }
+        .nav-links a:hover { color: var(--text); }
 
         .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--primary);
-            transition: width 0.3s;
+            content: ''; position: absolute; bottom: -5px; left: 0;
+            width: 0; height: 2px; background: var(--primary); transition: width 0.3s;
         }
 
-        .nav-links a:hover::after {
-            width: 100%;
-        }
+        .nav-links a:hover::after { width: 100%; }
 
-        .nav-controls {
-            display: flex;
-            gap: 1rem;
-            align-items: center;
-        }
-
-        .lang-switcher {
-            display: flex;
-            gap: 0.5rem;
-            background: rgba(255, 255, 255, 0.05);
-            padding: 0.25rem;
-            border-radius: 2rem;
-        }
-
-        .lang-btn {
-            padding: 0.5rem 1rem;
-            border: none;
-            background: transparent;
-            color: var(--muted);
-            cursor: pointer;
-            border-radius: 1.5rem;
-            font-size: 0.875rem;
-            transition: all 0.3s;
-            font-family: inherit;
-        }
-
-        .lang-btn.active {
-            background: var(--primary);
-            color: white;
-        }
-
-        .icon-btn {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            border: none;
-            background: rgba(255, 255, 255, 0.05);
-            color: var(--text);
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s;
-        }
-
-        .icon-btn:hover {
-            background: rgba(255, 255, 255, 0.1);
-        }
-
-        /* Hero Section */
         .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-            padding-top: 80px;
+            min-height: 100vh; display: flex; align-items: center; justify-content: center;
+            position: relative; overflow: hidden; padding-top: 80px;
         }
 
         .hero-bg {
-            position: absolute;
-            inset: 0;
+            position: absolute; inset: 0;
             background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.05) 1px, transparent 0);
             background-size: 40px 40px;
         }
 
         .hero-glow {
-            position: absolute;
-            border-radius: 50%;
-            filter: blur(80px);
-            opacity: 0.3;
-            animation: float 6s ease-in-out infinite;
+            position: absolute; border-radius: 50%; filter: blur(80px);
+            opacity: 0.3; animation: float 6s ease-in-out infinite;
         }
 
-        .glow-1 {
-            width: 400px;
-            height: 400px;
-            background: var(--primary);
-            top: 10%;
-            right: 10%;
-            animation-delay: 0s;
-        }
+        .glow-1 { width: 400px; height: 400px; background: var(--primary); top: 10%; right: 10%; }
+        .glow-2 { width: 300px; height: 300px; background: var(--secondary); bottom: 20%; left: 10%; animation-delay: 3s; }
 
-        .glow-2 {
-            width: 300px;
-            height: 300px;
-            background: var(--secondary);
-            bottom: 20%;
-            left: 10%;
-            animation-delay: 3s;
-        }
+        @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-30px); } }
 
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-30px); }
-        }
-
-        .hero-content {
-            text-align: center;
-            position: relative;
-            z-index: 10;
-            max-width: 800px;
-        }
+        .hero-content { text-align: center; position: relative; z-index: 10; max-width: 800px; }
 
         .badge {
-            display: inline-block;
-            padding: 0.5rem 1.5rem;
-            background: rgba(14, 165, 233, 0.1);
-            border: 1px solid rgba(14, 165, 233, 0.3);
-            color: var(--primary);
-            border-radius: 2rem;
-            font-size: 0.875rem;
-            font-weight: 600;
-            margin-bottom: 1.5rem;
+            display: inline-block; padding: 0.5rem 1.5rem;
+            background: rgba(14, 165, 233, 0.1); border: 1px solid rgba(14, 165, 233, 0.3);
+            color: var(--primary); border-radius: 2rem; font-size: 0.875rem;
+            font-weight: 600; margin-bottom: 1.5rem;
         }
 
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
-        }
+        .hero h1 { font-size: 3.5rem; font-weight: 700; margin-bottom: 1.5rem; line-height: 1.2; }
 
         .gradient-text {
             background: linear-gradient(135deg, var(--primary), var(--secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
         }
 
-        .hero p {
-            font-size: 1.25rem;
-            color: var(--muted);
-            margin-bottom: 2.5rem;
-            line-height: 1.8;
-        }
+        .hero p { font-size: 1.25rem; color: var(--muted); margin-bottom: 2.5rem; line-height: 1.8; }
 
-        .btn-group {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
+        .btn-group { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
 
         .btn {
-            padding: 1rem 2rem;
-            border-radius: 2rem;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            border: none;
-            cursor: pointer;
-            font-size: 1rem;
-            font-family: inherit;
+            padding: 1rem 2rem; border-radius: 2rem; font-weight: 600;
+            text-decoration: none; transition: all 0.3s; display: inline-flex;
+            align-items: center; gap: 0.5rem; border: none; cursor: pointer;
+            font-size: 1rem; font-family: inherit;
         }
 
         .btn-primary {
-            background: var(--primary);
-            color: white;
+            background: var(--primary); color: white;
             box-shadow: 0 10px 30px rgba(14, 165, 233, 0.3);
         }
 
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 15px 40px rgba(14, 165, 233, 0.4);
-        }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 15px 40px rgba(14, 165, 233, 0.4); }
 
         .btn-secondary {
-            background: rgba(255, 255, 255, 0.05);
-            color: var(--text);
+            background: rgba(255, 255, 255, 0.05); color: var(--text);
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.1);
-        }
+        .btn-secondary:hover { background: rgba(255, 255, 255, 0.1); }
 
-        /* Services Section */
-        .section {
-            padding: 6rem 0;
-        }
+        .section { padding: 6rem 0; }
 
-        .section-header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
+        .section-header { text-align: center; margin-bottom: 4rem; }
 
-        .section-header h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
+        .section-header h2 { font-size: 2.5rem; margin-bottom: 1rem; }
 
-        .section-header p {
-            color: var(--muted);
-            font-size: 1.125rem;
-        }
+        .section-header p { color: var(--muted); font-size: 1.125rem; }
 
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-        }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
 
         .service-card {
             background: linear-gradient(145deg, var(--surface), rgba(30, 41, 59, 0.5));
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-radius: 1.5rem;
-            padding: 2.5rem;
-            transition: all 0.3s ease;
-            cursor: pointer;
+            border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 1.5rem;
+            padding: 2.5rem; transition: all 0.3s ease; cursor: pointer;
         }
 
         .service-card:hover {
-            transform: translateY(-10px);
-            border-color: rgba(14, 165, 233, 0.3);
+            transform: translateY(-10px); border-color: rgba(14, 165, 233, 0.3);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
         }
 
         .service-icon {
-            width: 60px;
-            height: 60px;
-            background: rgba(14, 165, 233, 0.1);
-            border-radius: 1rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.5rem;
-            color: var(--primary);
-            font-size: 1.5rem;
+            width: 60px; height: 60px; background: rgba(14, 165, 233, 0.1);
+            border-radius: 1rem; display: flex; align-items: center; justify-content: center;
+            margin-bottom: 1.5rem; color: var(--primary); font-size: 1.5rem;
         }
 
-        .service-card h3 {
-            font-size: 1.25rem;
-            margin-bottom: 1rem;
-        }
+        .service-card h3 { font-size: 1.25rem; margin-bottom: 1rem; }
 
-        .service-card p {
-            color: var(--muted);
-            font-size: 0.95rem;
-            line-height: 1.7;
-        }
+        .service-card p { color: var(--muted); font-size: 0.95rem; line-height: 1.7; }
 
-        /* Portfolio Section */
-        .portfolio {
-            background: rgba(255, 255, 255, 0.02);
-        }
+        .portfolio { background: rgba(255, 255, 255, 0.02); }
 
-        .portfolio-filters {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            margin-bottom: 3rem;
-            flex-wrap: wrap;
-        }
+        .portfolio-filters { display: flex; gap: 1rem; justify-content: center; margin-bottom: 3rem; flex-wrap: wrap; }
 
         .filter-btn {
-            padding: 0.75rem 1.5rem;
-            background: rgba(255, 255, 255, 0.05);
-            border: none;
-            color: var(--muted);
-            border-radius: 2rem;
-            cursor: pointer;
-            transition: all 0.3s;
-            font-family: inherit;
+            padding: 0.75rem 1.5rem; background: rgba(255, 255, 255, 0.05);
+            border: none; color: var(--muted); border-radius: 2rem;
+            cursor: pointer; transition: all 0.3s; font-family: inherit;
         }
 
-        .filter-btn.active, .filter-btn:hover {
-            background: var(--primary);
-            color: white;
-        }
+        .filter-btn.active, .filter-btn:hover { background: var(--primary); color: white; }
 
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-        }
+        .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; }
 
         .portfolio-item {
-            position: relative;
-            border-radius: 1.5rem;
-            overflow: hidden;
-            aspect-ratio: 16/9;
-            background: var(--surface);
-            cursor: pointer;
-            group: true;
+            position: relative; border-radius: 1.5rem; overflow: hidden;
+            aspect-ratio: 16/9; background: var(--surface); cursor: pointer;
+        }
+
+        .portfolio-item video, .portfolio-item iframe {
+            width: 100%; height: 100%; object-fit: cover;
         }
 
         .portfolio-overlay {
-            position: absolute;
-            inset: 0;
+            position: absolute; inset: 0;
             background: linear-gradient(to top, rgba(15, 23, 42, 0.95), transparent);
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            padding: 2rem;
-            opacity: 0;
-            transition: opacity 0.3s;
+            display: flex; flex-direction: column; justify-content: flex-end;
+            padding: 2rem; opacity: 0; transition: opacity 0.3s;
+            pointer-events: none;
         }
 
-        .portfolio-item:hover .portfolio-overlay {
-            opacity: 1;
+        .portfolio-item:hover .portfolio-overlay { opacity: 1; }
+
+        .portfolio-category { color: var(--primary); font-size: 0.875rem; font-weight: 600; margin-bottom: 0.5rem; }
+
+        .video-container {
+            position: relative; width: 100%; height: 100%;
+            background: var(--surface);
         }
 
-        .portfolio-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s;
+        .video-fallback {
+            position: absolute; inset: 0; display: flex; flex-direction: column;
+            align-items: center; justify-content: center; color: var(--muted);
+            text-align: center; padding: 2rem;
         }
 
-        .portfolio-item:hover img {
-            transform: scale(1.1);
+        .play-icon {
+            width: 80px; height: 80px; background: rgba(14, 165, 233, 0.2);
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            margin-bottom: 1rem; color: var(--primary); font-size: 2rem;
+            cursor: pointer; transition: all 0.3s;
         }
 
-        .play-btn {
-            width: 60px;
-            height: 60px;
-            background: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(10px);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1rem;
-            color: white;
-            font-size: 1.5rem;
-        }
+        .play-icon:hover { background: rgba(14, 165, 233, 0.4); transform: scale(1.1); }
 
-        .portfolio-category {
-            color: var(--primary);
-            font-size: 0.875rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
+        .about-content { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
 
-        /* About Section */
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .about-visual {
-            position: relative;
-        }
+        .about-visual { position: relative; }
 
         .about-image {
-            width: 100%;
-            aspect-ratio: 1;
+            width: 100%; aspect-ratio: 1;
             background: linear-gradient(135deg, rgba(14, 165, 233, 0.2), rgba(99, 102, 241, 0.2));
-            border-radius: 2rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 5rem;
-            color: var(--primary);
-            position: relative;
+            border-radius: 2rem; display: flex; align-items: center; justify-content: center;
+            font-size: 5rem; color: var(--primary); position: relative;
         }
 
         .experience-badge {
-            position: absolute;
-            bottom: -20px;
-            right: -20px;
-            background: rgba(30, 41, 59, 0.9);
-            backdrop-filter: blur(10px);
-            padding: 1.5rem;
-            border-radius: 1rem;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: absolute; bottom: -20px; right: -20px;
+            background: rgba(30, 41, 59, 0.9); backdrop-filter: blur(10px);
+            padding: 1.5rem; border-radius: 1rem; border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        .experience-badge .number {
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--primary);
-        }
+        .experience-badge .number { font-size: 2rem; font-weight: 700; color: var(--primary); }
 
-        .experience-badge .label {
-            color: var(--muted);
-            font-size: 0.875rem;
-        }
+        .experience-badge .label { color: var(--muted); font-size: 0.875rem; }
 
-        .about-text h3 {
-            color: var(--primary);
-            font-size: 1rem;
-            margin-bottom: 1rem;
-        }
+        .about-text h3 { color: var(--primary); font-size: 1rem; margin-bottom: 1rem; }
 
-        .about-text p {
-            color: var(--muted);
-            font-size: 1.125rem;
-            line-height: 1.8;
-            margin-bottom: 2rem;
-        }
+        .about-text p { color: var(--muted); font-size: 1.125rem; line-height: 1.8; margin-bottom: 2rem; }
 
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
-        }
+        .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
 
-        .stat-item {
-            text-align: center;
-            padding: 1.5rem;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 1rem;
-        }
+        .stat-item { text-align: center; padding: 1.5rem; background: rgba(255, 255, 255, 0.05); border-radius: 1rem; }
 
         .stat-number {
-            font-size: 2rem;
-            font-weight: 700;
+            font-size: 2rem; font-weight: 700;
             background: linear-gradient(135deg, var(--primary), var(--secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
             margin-bottom: 0.5rem;
         }
 
-        .stat-label {
-            color: var(--muted);
-            font-size: 0.875rem;
-        }
+        .stat-label { color: var(--muted); font-size: 0.875rem; }
 
-        /* Contact Section */
-        .contact {
-            background: rgba(255, 255, 255, 0.02);
-        }
+        .contact { background: rgba(255, 255, 255, 0.02); }
 
-        .contact-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
+        .contact-content { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; max-width: 1000px; margin: 0 auto; }
 
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-        }
+        .contact-info { display: flex; flex-direction: column; gap: 1.5rem; }
 
         .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            padding: 1.5rem;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 1rem;
-            transition: all 0.3s;
+            display: flex; align-items: center; gap: 1rem; padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.05); border-radius: 1rem; transition: all 0.3s;
         }
 
-        .contact-item:hover {
-            background: rgba(255, 255, 255, 0.08);
-            transform: translateX(5px);
-        }
+        .contact-item:hover { background: rgba(255, 255, 255, 0.08); transform: translateX(5px); }
 
         .contact-icon {
-            width: 50px;
-            height: 50px;
-            background: rgba(14, 165, 233, 0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--primary);
-            font-size: 1.25rem;
+            width: 50px; height: 50px; background: rgba(14, 165, 233, 0.1);
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            color: var(--primary); font-size: 1.25rem;
         }
 
-        .contact-details h4 {
-            font-size: 0.875rem;
-            color: var(--muted);
-            margin-bottom: 0.25rem;
+        .contact-details h4 { font-size: 0.875rem; color: var(--muted); margin-bottom: 0.25rem; }
+
+        .contact-details p { font-weight: 600; }
+
+        .contact-form { display: flex; flex-direction: column; gap: 1.5rem; }
+
+        .form-group { display: flex; flex-direction: column; gap: 0.5rem; }
+
+        .form-group input, .form-group select, .form-group textarea {
+            padding: 1rem; background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 0.75rem;
+            color: var(--text); font-family: inherit; font-size: 1rem; transition: all 0.3s;
         }
 
-        .contact-details p {
-            font-weight: 600;
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            outline: none; border-color: var(--primary);
         }
 
-        .contact-form {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-        }
+        .form-group input::placeholder, .form-group textarea::placeholder { color: var(--muted); }
 
-        .form-group {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-        }
+        footer { border-top: 1px solid rgba(255, 255, 255, 0.1); padding: 3rem 0; }
 
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            padding: 1rem;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 0.75rem;
-            color: var(--text);
-            font-family: inherit;
-            font-size: 1rem;
-            transition: all 0.3s;
-        }
-
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--primary);
-        }
-
-        .form-group input::placeholder,
-        .form-group textarea::placeholder {
-            color: var(--muted);
-        }
-
-        /* Admin Panel */
-        .admin-panel {
-            position: fixed;
-            top: 0;
-            right: -400px;
-            width: 400px;
-            height: 100vh;
-            background: var(--surface);
-            border-left: 1px solid rgba(255, 255, 255, 0.1);
-            z-index: 2000;
-            transition: right 0.3s ease;
-            overflow-y: auto;
-        }
-
-        .admin-panel.open {
-            right: 0;
-        }
-
-        .admin-overlay {
-            position: fixed;
-            inset: 0;
-            background: rgba(0, 0, 0, 0.5);
-            backdrop-filter: blur(5px);
-            z-index: 1999;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s;
-        }
-
-        .admin-overlay.open {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        .admin-header {
-            padding: 2rem;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .admin-header h2 {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-size: 1.25rem;
-        }
-
-        .admin-content {
-            padding: 2rem;
-        }
-
-        .admin-section {
-            margin-bottom: 2rem;
-        }
-
-        .admin-section h3 {
-            font-size: 0.875rem;
-            color: var(--muted);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 1rem;
-        }
-
-        .theme-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-        }
-
-        .theme-option {
-            padding: 1rem;
-            border: 2px solid rgba(255, 255, 255, 0.1);
-            border-radius: 0.75rem;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-
-        .theme-option:hover {
-            border-color: rgba(255, 255, 255, 0.3);
-        }
-
-        .theme-option.active {
-            border-color: var(--primary);
-            background: rgba(14, 165, 233, 0.1);
-        }
-
-        .theme-colors {
-            display: flex;
-            gap: 0.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .color-dot {
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-        }
-
-        .theme-name {
-            font-size: 0.875rem;
-            font-weight: 500;
-        }
-
-        .admin-btn {
-            width: 100%;
-            padding: 1rem;
-            background: rgba(255, 255, 255, 0.05);
-            border: none;
-            color: var(--text);
-            border-radius: 0.75rem;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            margin-bottom: 0.75rem;
-            transition: all 0.3s;
-            font-family: inherit;
-        }
-
-        .admin-btn:hover {
-            background: rgba(255, 255, 255, 0.1);
-        }
-
-        .save-btn {
-            background: var(--primary);
-            color: white;
-            justify-content: center;
-            font-weight: 600;
-            margin-top: 1rem;
-        }
-
-        .save-btn:hover {
-            background: var(--secondary);
-        }
-
-        /* Footer */
-        footer {
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 3rem 0;
-        }
-
-        .footer-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+        .footer-content { display: flex; justify-content: space-between; align-items: center; }
 
         .footer-logo {
-            font-size: 1.5rem;
-            font-weight: 700;
+            font-size: 1.5rem; font-weight: 700;
             background: linear-gradient(135deg, var(--primary), var(--secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
         }
 
-        .footer-text {
-            color: var(--muted);
-            font-size: 0.875rem;
-        }
+        .footer-text { color: var(--muted); font-size: 0.875rem; }
 
-        .social-links {
-            display: flex;
-            gap: 1rem;
-        }
+        .social-links { display: flex; gap: 1rem; }
 
         .social-link {
-            width: 40px;
-            height: 40px;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--text);
-            text-decoration: none;
-            transition: all 0.3s;
+            width: 40px; height: 40px; background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            color: var(--text); text-decoration: none; transition: all 0.3s;
         }
 
-        .social-link:hover {
-            background: var(--primary);
-            transform: translateY(-3px);
-        }
+        .social-link:hover { background: var(--primary); transform: translateY(-3px); }
 
-        /* Mobile Menu */
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            color: var(--text);
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
+        .mobile-menu-btn { display: none; background: none; border: none; color: var(--text); font-size: 1.5rem; cursor: pointer; }
 
-        /* Responsive */
+        .fade-in { opacity: 0; transform: translateY(30px); transition: all 0.6s ease; }
+
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+
         @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-
-            .mobile-menu-btn {
-                display: block;
-            }
-
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .about-content,
-            .contact-content {
-                grid-template-columns: 1fr;
-            }
-
-            .stats {
-                grid-template-columns: 1fr;
-            }
-
-            .admin-panel {
-                width: 100%;
-                right: -100%;
-            }
-
-            .portfolio-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* Animations */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.6s ease;
-        }
-
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Icons */
-        .icon {
-            width: 24px;
-            height: 24px;
-            display: inline-block;
-            vertical-align: middle;
+            .nav-links { display: none; }
+            .mobile-menu-btn { display: block; }
+            .hero h1 { font-size: 2rem; }
+            .about-content, .contact-content { grid-template-columns: 1fr; }
+            .stats { grid-template-columns: 1fr; }
+            .portfolio-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
-<body class="theme-blue">
+<body>
 
-    <!-- Scroll Progress -->
     <div class="scroll-progress" id="scrollProgress"></div>
 
-    <!-- Admin Overlay -->
-    <div class="admin-overlay" id="adminOverlay"></div>
-
-    <!-- Admin Panel -->
-    <div class="admin-panel" id="adminPanel">
-        <div class="admin-header">
-            <h2>
-                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                لوحة التحكم
-            </h2>
-            <button class="icon-btn" onclick="toggleAdmin()">
-                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-            </button>
-        </div>
-        <div class="admin-content">
-            <div class="admin-section">
-                <h3>السمات</h3>
-                <div class="theme-grid">
-                    <div class="theme-option active" onclick="setTheme('theme-blue')">
-                        <div class="theme-colors">
-                            <div class="color-dot" style="background: #0ea5e9;"></div>
-                            <div class="color-dot" style="background: #6366f1;"></div>
-                        </div>
-                        <div class="theme-name">Blue Ocean</div>
-                    </div>
-                    <div class="theme-option" onclick="setTheme('theme-emerald')">
-                        <div class="theme-colors">
-                            <div class="color-dot" style="background: #10b981;"></div>
-                            <div class="color-dot" style="background: #059669;"></div>
-                        </div>
-                        <div class="theme-name">Emerald</div>
-                    </div>
-                    <div class="theme-option" onclick="setTheme('theme-rose')">
-                        <div class="theme-colors">
-                            <div class="color-dot" style="background: #f43f5e;"></div>
-                            <div class="color-dot" style="background: #e11d48;"></div>
-                        </div>
-                        <div class="theme-name">Rose Gold</div>
-                    </div>
-                    <div class="theme-option" onclick="setTheme('theme-amber')">
-                        <div class="theme-colors">
-                            <div class="color-dot" style="background: #f59e0b;"></div>
-                            <div class="color-dot" style="background: #d97706;"></div>
-                        </div>
-                        <div class="theme-name">Amber Sun</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="admin-section">
-                <h3>المحتوى</h3>
-                <button class="admin-btn">
-                    <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"></path></svg>
-                    رفع فيديو جديد
-                </button>
-                <button class="admin-btn">
-                    <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-                    إضافة صورة للمعرض
-                </button>
-                <button class="admin-btn">
-                    <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
-                    تعديل النصوص
-                </button>
-            </div>
-
-            <button class="admin-btn save-btn" onclick="toggleAdmin()">
-                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                حفظ التغييرات
-            </button>
-        </div>
-    </div>
-
-    <!-- Navigation -->
     <nav id="navbar">
         <div class="container">
             <div class="nav-content">
                 <div class="logo">EngConsult</div>
-                
-                <ul class="nav-links" id="navLinks">
-                    <li><a href="#home" data-key="home">الرئيسية</a></li>
-                    <li><a href="#services" data-key="services">الخدمات</a></li>
-                    <li><a href="#portfolio" data-key="portfolio">أعمالنا</a></li>
-                    <li><a href="#about" data-key="about">من نحن</a></li>
-                    <li><a href="#contact" data-key="contact">تواصل معنا</a></li>
+                <ul class="nav-links">
+                    <li><a href="#home">الرئيسية</a></li>
+                    <li><a href="#services">الخدمات</a></li>
+                    <li><a href="#portfolio">أعمالنا</a></li>
+                    <li><a href="#about">من نحن</a></li>
+                    <li><a href="#contact">تواصل معنا</a></li>
                 </ul>
-
-                <div class="nav-controls">
-                    <div class="lang-switcher">
-                        <button class="lang-btn active" onclick="setLang('ar')">العربية</button>
-                        <button class="lang-btn" onclick="setLang('en')">EN</button>
-                        <button class="lang-btn" onclick="setLang('zh')">中文</button>
-                    </div>
-                    <button class="icon-btn" onclick="toggleAdmin()" title="لوحة التحكم">
-                        <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                    </button>
-                    <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
-                        <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-                    </button>
-                </div>
+                <button class="mobile-menu-btn">☰</button>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-bg"></div>
         <div class="hero-glow glow-1"></div>
         <div class="hero-glow glow-2"></div>
-        
         <div class="container">
             <div class="hero-content fade-in">
-                <span class="badge" data-key="heroSubtitle">حلول هندسية متكاملة</span>
-                <h1 data-key="heroTitle">
-                    <span class="gradient-text">استشارات هندسية</span><br>
-                    بمعايير عالمية
-                </h1>
-                <p data-key="heroDesc">نقدم خدمات استشارية متكاملة تشمل الرسم ثلاثي الأبعاد، المخططات الإلكترونية، محاكاة الأجهزة، ودراسات الجدوى الهندسية قبل التصنيع</p>
+                <span class="badge">حلول هندسية متكاملة</span>
+                <h1><span class="gradient-text">استشارات هندسية</span><br>بمعايير عالمية</h1>
+                <p>نقدم خدمات استشارية متكاملة تشمل الرسم ثلاثي الأبعاد، المخططات الإلكترونية، محاكاة الأجهزة، ودراسات الجدوى الهندسية قبل التصنيع</p>
                 <div class="btn-group">
-                    <a href="#contact" class="btn btn-primary" data-key="ctaPrimary">
-                        ابدأ مشروعك
-                        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                    </a>
-                    <a href="#services" class="btn btn-secondary" data-key="ctaSecondary">تعرف على خدماتنا</a>
+                    <a href="#contact" class="btn btn-primary">ابدأ مشروعك →</a>
+                    <a href="#services" class="btn btn-secondary">تعرف على خدماتنا</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
     <section class="section" id="services">
         <div class="container">
             <div class="section-header fade-in">
-                <h2 data-key="servicesTitle">خدماتنا الهندسية</h2>
-                <p data-key="servicesSubtitle">حلول متكاملة لكل مرحلة من مراحل التصميم والتصنيع</p>
+                <h2>خدماتنا الهندسية</h2>
+                <p>حلول متكاملة لكل مرحلة من مراحل التصميم والتصنيع</p>
             </div>
-
             <div class="services-grid">
                 <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <svg width="30" height="30" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
-                    </div>
-                    <h3 data-key="service1Title">الرسم ثلاثي الأبعاد</h3>
-                    <p data-key="service1Desc">نمذجة دقيقة باستخدام أحدث برامج CAD/CAM مع إمكانية التعديل التفاعلي والمعاينة قبل التنفيذ</p>
+                    <div class="service-icon">📐</div>
+                    <h3>الرسم ثلاثي الأبعاد</h3>
+                    <p>نمذجة دقيقة باستخدام أحدث برامج CAD/CAM مع إمكانية التعديل التفاعلي والمعاينة قبل التنفيذ</p>
                 </div>
-
                 <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <svg width="30" height="30" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
-                    </div>
-                    <h3 data-key="service2Title">المخططات الإلكترونية</h3>
-                    <p data-key="service2Desc">تصميم مخططات كهربائية وهيكلية دقيقة مع التوافق مع المعايير الدولية والمحلية</p>
+                    <div class="service-icon">📋</div>
+                    <h3>المخططات الإلكترونية</h3>
+                    <p>تصميم مخططات كهربائية وهيكلية دقيقة مع التوافق مع المعايير الدولية والمحلية</p>
                 </div>
-
                 <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <svg width="30" height="30" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                    </div>
-                    <h3 data-key="service3Title">محاكاة الأجهزة</h3>
-                    <p data-key="service3Desc">اختبار افتراضي شامل للأداء والمتانة تحت ظروف تشغيل مختلفة قبل مرحلة البناء الفعلي</p>
+                    <div class="service-icon">💻</div>
+                    <h3>محاكاة الأجهزة</h3>
+                    <p>اختبار افتراضي شامل للأداء والمتانة تحت ظروف تشغيل مختلفة قبل مرحلة البناء الفعلي</p>
                 </div>
-
                 <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <svg width="30" height="30" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
-                    </div>
-                    <h3 data-key="service4Title">دراسات ما قبل التصنيع</h3>
-                    <p data-key="service4Desc">تحليل شامل للتكلفة والجدوى مع توصيات تحسين التصميم لتقليل التكاليف ورفع الكفاءة</p>
+                    <div class="service-icon">📊</div>
+                    <h3>دراسات ما قبل التصنيع</h3>
+                    <p>تحليل شامل للتكلفة والجدوى مع توصيات تحسين التصميم لتقليل التكاليف ورفع الكفاءة</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Portfolio Section -->
     <section class="section portfolio" id="portfolio">
         <div class="container">
             <div class="section-header fade-in">
-                <h2 data-key="portfolioTitle">معرض أعمالنا</h2>
-                <p data-key="portfolioSubtitle">نماذج من مشاريعنا التفاعلية والمحاكاة الهندسية</p>
+                <h2>معرض أعمالنا</h2>
+                <p>نماذج من مشاريعنا التفاعلية والمحاكاة الهندسية</p>
             </div>
-
             <div class="portfolio-filters fade-in">
                 <button class="filter-btn active" onclick="filterPortfolio('all')">الكل</button>
                 <button class="filter-btn" onclick="filterPortfolio('3d')">رسم 3D</button>
                 <button class="filter-btn" onclick="filterPortfolio('schematic')">مخططات</button>
                 <button class="filter-btn" onclick="filterPortfolio('sim')">محاكاة</button>
-                <button class="filter-btn" onclick="filterPortfolio('study')">دراسات</button>
             </div>
-
             <div class="portfolio-grid" id="portfolioGrid">
-                <div class="portfolio-item fade-in" data-category="3d">
-                    <video width="100%" height="100%" controls poster="thumbnail.jpg">
-        <source src="https://drive.google.com/uc?export=download&id=1IkzHPDiQoRoQMx3-38i7tKziiaiA5GkQ" type
-                    <div class="portfolio-overlay">
-                        <div class="play-btn">
-                            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                        </div>
-                        <div class="portfolio-category">رسم 3D</div>
-                        <h3>نموذج محرك توربيني ثلاثي الأبعاد</h3>
-                    </div>
-                </div>
-
-                <div class="portfolio-item fade-in" data-category="schematic">
-                    <img src="https://images.unsplash.com/photo-1581092921461-eab62e97a782?w=800&h=450&fit=crop" alt="Schematic">
-                    <div class="portfolio-overlay">
-                        <div class="play-btn">
-                            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                        </div>
-                        <div class="portfolio-category">مخططات</div>
-                        <h3>مخطط دائرة كهربائية معقدة</h3>
-                    </div>
-                </div>
-
+                
+                <!-- فيديو 1 - محاكاة -->
                 <div class="portfolio-item fade-in" data-category="sim">
-                    <img src="https://images.unsplash.com/photo-1507668077129-56e32842fceb?w=800&h=450&fit=crop" alt="Simulation">
+                    <div class="video-container">
+                        <iframe 
+                            src="https://drive.google.com/file/d/1IkzHPDiQoRoQMx3-38i7tKziiaiA5GkQ/preview" 
+                            width="100%" 
+                            height="100%" 
+                            allow="autoplay; fullscreen"
+                            style="border: none;">
+                        </iframe>
+                    </div>
                     <div class="portfolio-overlay">
-                        <div class="play-btn">
-                            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                        </div>
                         <div class="portfolio-category">محاكاة</div>
                         <h3>محاكاة توزيع الحرارة</h3>
                     </div>
                 </div>
 
-                <div class="portfolio-item fade-in" data-category="study">
-                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=450&fit=crop" alt="Study">
-                    <div class="portfolio-overlay">
-                        <div class="play-btn">
-                            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                        </div>
-                        <div class="portfolio-category">دراسات</div>
-                        <h3>دراسة جدوى مصنع ذكي</h3>
-                    </div>
-                </div>
-
+                <!-- فيديو 2 - رسم 3D -->
                 <div class="portfolio-item fade-in" data-category="3d">
-                   <video width="100%" height="100%" controls poster="thumbnail.jpg">
-        <source src="https://drive.google.com/uc?export=download&id=1IkzHPDiQoRoQMx3-38i7tKziiaiA5GkQ" type
+                    <div class="video-container">
+                        <iframe 
+                            src="https://drive.google.com/file/d/15RNzu7cLknw30d82g7qnQOk7f-zn8t7m/preview" 
+                            width="100%" 
+                            height="100%" 
+                            allow="autoplay; fullscreen"
+                            style="border: none;">
+                        </iframe>
+                    </div>
                     <div class="portfolio-overlay">
-                        <div class="play-btn">
-                            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                        </div>
                         <div class="portfolio-category">رسم 3D</div>
-                        <h3>تصميم هيكلي لمبنى ذكي</h3>
+                        <h3>تصميم هيكلي ثلاثي الأبعاد</h3>
                     </div>
                 </div>
 
+                <!-- فيديو 3 - محاكاة -->
                 <div class="portfolio-item fade-in" data-category="sim">
-                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=450&fit=crop" alt="Simulation">
+                    <div class="video-container">
+                        <iframe 
+                            src="https://drive.google.com/file/d/1IkzHPDiQoRoQMx3-38i7tKziiaiA5GkQ/preview" 
+                            width="100%" 
+                            height="100%" 
+                            allow="autoplay; fullscreen"
+                            style="border: none;">
+                        </iframe>
+                    </div>
                     <div class="portfolio-overlay">
-                        <div class="play-btn">
-                            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                        </div>
                         <div class="portfolio-category">محاكاة</div>
                         <h3>محاكاة تدفق الهواء</h3>
                     </div>
                 </div>
+
+                <!-- فيديو 4 - مخططات -->
+                <div class="portfolio-item fade-in" data-category="schematic">
+                    <div class="video-container">
+                        <iframe 
+                            src="https://drive.google.com/file/d/15RNzu7cLknw30d82g7qnQOk7f-zn8t7m/preview" 
+                            width="100%" 
+                            height="100%" 
+                            allow="autoplay; fullscreen"
+                            style="border: none;">
+                        </iframe>
+                    </div>
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-category">مخططات</div>
+                        <h3>مخطط دائرة كهربائية معقدة</h3>
+                    </div>
+                </div>
+
+                <!-- فيديو 5 - رسم 3D -->
+                <div class="portfolio-item fade-in" data-category="3d">
+                    <div class="video-container">
+                        <iframe 
+                            src="https://drive.google.com/file/d/1IkzHPDiQoRoQMx3-38i7tKziiaiA5GkQ/preview" 
+                            width="100%" 
+                            height="100%" 
+                            allow="autoplay; fullscreen"
+                            style="border: none;">
+                        </iframe>
+                    </div>
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-category">رسم 3D</div>
+                        <h3>نموذج محرك توربيني</h3>
+                    </div>
+                </div>
+
+                <!-- فيديو 6 - محاكاة -->
+                <div class="portfolio-item fade-in" data-category="sim">
+                    <div class="video-container">
+                        <iframe 
+                            src="https://drive.google.com/file/d/15RNzu7cLknw30d82g7qnQOk7f-zn8t7m/preview" 
+                            width="100%" 
+                            height="100%" 
+                            allow="autoplay; fullscreen"
+                            style="border: none;">
+                        </iframe>
+                    </div>
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-category">محاكاة</div>
+                        <h3>دراسة جدوى مصنع ذكي</h3>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
     <section class="section" id="about">
         <div class="container">
             <div class="about-content">
                 <div class="about-visual fade-in">
-                    <div class="about-image">
-                        <svg width="120" height="120" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
-                    </div>
+                    <div class="about-image">🔧</div>
                     <div class="experience-badge">
                         <div class="number">10+</div>
                         <div class="label">سنوات خبرة</div>
                     </div>
                 </div>
-
                 <div class="about-text fade-in">
-                    <h3 data-key="aboutSubtitle">فريق هندسي متخصص</h3>
-                    <h2 data-key="aboutTitle">من نحن</h2>
-                    <p data-key="aboutDesc">نحن نجمع بين الخبرة الهندسية العميقة والتقنيات الرقمية المتقدمة لتقديم حلول استشارية مبتكرة. نؤمن بأن كل مشروع يستحق دراسة دقيقة ومحاكاة واقعية تضمن النجاح قبل البدء في التنفيذ الفعلي.</p>
-                    
+                    <h3>فريق هندسي متخصص</h3>
+                    <h2>من نحن</h2>
+                    <p>نحن نجمع بين الخبرة الهندسية العميقة والتقنيات الرقمية المتقدمة لتقديم حلول استشارية مبتكرة. نؤمن بأن كل مشروع يستحق دراسة دقيقة ومحاكاة واقعية تضمن النجاح قبل البدء في التنفيذ الفعلي.</p>
                     <div class="stats">
                         <div class="stat-item">
                             <div class="stat-number">150+</div>
-                            <div class="stat-label" data-key="stat1">مشروع منجز</div>
+                            <div class="stat-label">مشروع منجز</div>
                         </div>
                         <div class="stat-item">
                             <div class="stat-number">50+</div>
-                            <div class="stat-label" data-key="stat2">عميل سعيد</div>
+                            <div class="stat-label">عميل سعيد</div>
                         </div>
                         <div class="stat-item">
                             <div class="stat-number">99%</div>
-                            <div class="stat-label" data-key="stat3">نسبة الرضا</div>
+                            <div class="stat-label">نسبة الرضا</div>
                         </div>
                     </div>
                 </div>
@@ -1203,59 +554,48 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section class="section contact" id="contact">
         <div class="container">
             <div class="section-header fade-in">
-                <h2 data-key="contactTitle">تواصل معنا</h2>
-                <p data-key="contactSubtitle">نحن هنا لتحويل أفكارك إلى واقع</p>
+                <h2>تواصل معنا</h2>
+                <p>نحن هنا لتحويل أفكارك إلى واقع</p>
             </div>
-
             <div class="contact-content">
                 <div class="contact-info fade-in">
                     <div class="contact-item">
-                        <div class="contact-icon">
-                            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
-                        </div>
+                        <div class="contact-icon">📞</div>
                         <div class="contact-details">
-                            <h4 data-key="phoneLabel">هاتف</h4>
+                            <h4>هاتف</h4>
                             <p>+966 50 000 0000</p>
                         </div>
                     </div>
-
                     <div class="contact-item">
-                        <div class="contact-icon">
-                            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                        </div>
+                        <div class="contact-icon">✉️</div>
                         <div class="contact-details">
-                            <h4 data-key="emailLabel">بريد إلكتروني</h4>
+                            <h4>بريد إلكتروني</h4>
                             <p>info@engconsult.com</p>
                         </div>
                     </div>
-
                     <div class="contact-item">
-                        <div class="contact-icon">
-                            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                        </div>
+                        <div class="contact-icon">📍</div>
                         <div class="contact-details">
-                            <h4 data-key="locationLabel">الموقع</h4>
+                            <h4>الموقع</h4>
                             <p>الرياض، المملكة العربية السعودية</p>
                         </div>
                     </div>
                 </div>
-
                 <form class="contact-form fade-in" onsubmit="event.preventDefault(); alert('تم إرسال رسالتك بنجاح!');">
                     <div class="form-group">
-                        <input type="text" placeholder="الاسم" data-key="namePlaceholder" required>
+                        <input type="text" placeholder="الاسم" required>
                     </div>
                     <div class="form-group">
-                        <input type="email" placeholder="البريد الإلكتروني" data-key="emailPlaceholder" required>
+                        <input type="email" placeholder="البريد الإلكتروني" required>
                     </div>
                     <div class="form-group">
-                        <input type="tel" placeholder="رقم الجوال" data-key="phonePlaceholder">
+                        <input type="tel" placeholder="رقم الجوال">
                     </div>
                     <div class="form-group">
-                        <select data-key="serviceSelect">
+                        <select>
                             <option>نوع الخدمة</option>
                             <option>الرسم ثلاثي الأبعاد</option>
                             <option>المخططات الإلكترونية</option>
@@ -1264,106 +604,35 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <textarea rows="4" placeholder="تفاصيل المشروع" data-key="messagePlaceholder"></textarea>
+                        <textarea rows="4" placeholder="تفاصيل المشروع"></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary" data-key="submitBtn" style="width: 100%;">
-                        إرسال الطلب
-                    </button>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">إرسال الطلب</button>
                 </form>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">EngConsult</div>
                 <div class="footer-text">© 2024 جميع الحقوق محفوظة</div>
                 <div class="social-links">
-                    <a href="#" class="social-link" title="Twitter">X</a>
-                    <a href="#" class="social-link" title="LinkedIn">in</a>
-                    <a href="#" class="social-link" title="YouTube">YT</a>
+                    <a href="#" class="social-link">X</a>
+                    <a href="#" class="social-link">in</a>
+                    <a href="#" class="social-link">YT</a>
                 </div>
             </div>
         </div>
     </footer>
 
     <script>
-        // Translations
-        const translations = {
-            ar: {
-                home: 'الرئيسية', services: 'الخدمات', portfolio: 'أعمالنا', about: 'من نحن', contact: 'تواصل معنا',
-                heroSubtitle: 'حلول هندسية متكاملة',
-                heroTitle: 'استشارات هندسية<br><span class="gradient-text">بمعايير عالمية</span>',
-                heroDesc: 'نقدم خدمات استشارية متكاملة تشمل الرسم ثلاثي الأبعاد، المخططات الإلكترونية، محاكاة الأجهزة، ودراسات الجدوى الهندسية قبل التصنيع',
-                ctaPrimary: 'ابدأ مشروعك', ctaSecondary: 'تعرف على خدماتنا',
-                servicesTitle: 'خدماتنا الهندسية', servicesSubtitle: 'حلول متكاملة لكل مرحلة من مراحل التصميم والتصنيع',
-                service1Title: 'الرسم ثلاثي الأبعاد', service1Desc: 'نمذجة دقيقة باستخدام أحدث برامج CAD/CAM مع إمكانية التعديل التفاعلي والمعاينة قبل التنفيذ',
-                service2Title: 'المخططات الإلكترونية', service2Desc: 'تصميم مخططات كهربائية وهيكلية دقيقة مع التوافق مع المعايير الدولية والمحلية',
-                service3Title: 'محاكاة الأجهزة', service3Desc: 'اختبار افتراضي شامل للأداء والمتانة تحت ظروف تشغيل مختلفة قبل مرحلة البناء الفعلي',
-                service4Title: 'دراسات ما قبل التصنيع', service4Desc: 'تحليل شامل للتكلفة والجدوى مع توصيات تحسين التصميم لتقليل التكاليف ورفع الكفاءة',
-                portfolioTitle: 'معرض أعمالنا', portfolioSubtitle: 'نماذج من مشاريعنا التفاعلية والمحاكاة الهندسية',
-                aboutTitle: 'من نحن', aboutSubtitle: 'فريق هندسي متخصص',
-                aboutDesc: 'نحن نجمع بين الخبرة الهندسية العميقة والتقنيات الرقمية المتقدمة لتقديم حلول استشارية مبتكرة. نؤمن بأن كل مشروع يستحق دراسة دقيقة ومحاكاة واقعية تضمن النجاح قبل البدء في التنفيذ الفعلي.',
-                stat1: 'مشروع منجز', stat2: 'عميل سعيد', stat3: 'نسبة الرضا',
-                contactTitle: 'تواصل معنا', contactSubtitle: 'نحن هنا لتحويل أفكارك إلى واقع',
-                phoneLabel: 'هاتف', emailLabel: 'بريد إلكتروني', locationLabel: 'الموقع',
-                namePlaceholder: 'الاسم', emailPlaceholder: 'البريد الإلكتروني', phonePlaceholder: 'رقم الجوال',
-                serviceSelect: 'نوع الخدمة', messagePlaceholder: 'تفاصيل المشروع', submitBtn: 'إرسال الطلب'
-            },
-            en: {
-                home: 'Home', services: 'Services', portfolio: 'Portfolio', about: 'About', contact: 'Contact',
-                heroSubtitle: 'Integrated Engineering Solutions',
-                heroTitle: 'Engineering Consultancy<br><span class="gradient-text">With Global Standards</span>',
-                heroDesc: 'We provide comprehensive consulting services including 3D modeling, electronic schematics, device simulation, and pre-manufacturing feasibility studies',
-                ctaPrimary: 'Start Your Project', ctaSecondary: 'Explore Our Services',
-                servicesTitle: 'Our Engineering Services', servicesSubtitle: 'Integrated solutions for every stage of design and manufacturing',
-                service1Title: '3D Modeling', service1Desc: 'Precise modeling using latest CAD/CAM software with interactive editing and preview capabilities',
-                service2Title: 'Electronic Schematics', service2Desc: 'Design of accurate electrical and structural diagrams compliant with international standards',
-                service3Title: 'Device Simulation', service3Desc: 'Comprehensive virtual testing of performance and durability under various conditions',
-                service4Title: 'Pre-Manufacturing Studies', service4Desc: 'Thorough cost and feasibility analysis with design optimization recommendations',
-                portfolioTitle: 'Our Portfolio', portfolioSubtitle: 'Samples of our interactive projects and engineering simulations',
-                aboutTitle: 'About Us', aboutSubtitle: 'Specialized Engineering Team',
-                aboutDesc: 'We combine deep engineering expertise with advanced digital technologies to provide innovative consulting solutions. We believe every project deserves careful study and realistic simulation.',
-                stat1: 'Projects Completed', stat2: 'Happy Clients', stat3: 'Satisfaction Rate',
-                contactTitle: 'Contact Us', contactSubtitle: 'We are here to turn your ideas into reality',
-                phoneLabel: 'Phone', emailLabel: 'Email', locationLabel: 'Location',
-                namePlaceholder: 'Name', emailPlaceholder: 'Email', phonePlaceholder: 'Phone Number',
-                serviceSelect: 'Service Type', messagePlaceholder: 'Project Details', submitBtn: 'Send Request'
-            },
-            zh: {
-                home: '首页', services: '服务', portfolio: '作品', about: '关于我们', contact: '联系我们',
-                heroSubtitle: '综合工程解决方案',
-                heroTitle: '工程咨询<br><span class="gradient-text">符合全球标准</span>',
-                heroDesc: '我们提供全面的咨询服务，包括3D建模、电子原理图、设备仿真和制造前可行性研究',
-                ctaPrimary: '开始您的项目', ctaSecondary: '探索我们的服务',
-                servicesTitle: '我们的工程服务', servicesSubtitle: '设计和制造每个阶段的集成解决方案',
-                service1Title: '3D建模', service1Desc: '使用最新的CAD/CAM软件进行精确建模，具有交互式编辑功能',
-                service2Title: '电子原理图', service2Desc: '设计符合国际标准的精确电气和结构图',
-                service3Title: '设备仿真', service3Desc: '在各种条件下对性能和耐久性进行全面虚拟测试',
-                service4Title: '制造前研究', service4Desc: '全面的成本和可行性分析以及设计优化建议',
-                portfolioTitle: '我们的作品集', portfolioSubtitle: '我们的互动项目和工程仿真样本',
-                aboutTitle: '关于我们', aboutSubtitle: '专业工程团队',
-                aboutDesc: '我们将深厚的工程专业知识与先进的数字技术相结合，提供创新的咨询解决方案。我们相信每个项目都值得仔细研究。',
-                stat1: '已完成项目', stat2: '满意客户', stat3: '满意度',
-                contactTitle: '联系我们', contactSubtitle: '我们在这里将您的想法变为现实',
-                phoneLabel: '电话', emailLabel: '电子邮件', locationLabel: '地址',
-                namePlaceholder: '姓名', emailPlaceholder: '电子邮件', phonePlaceholder: '电话号码',
-                serviceSelect: '服务类型', messagePlaceholder: '项目详情', submitBtn: '发送请求'
-            }
-        };
-
-        let currentLang = 'ar';
-
-        // Scroll Progress
         window.addEventListener('scroll', () => {
             const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
             const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
             const scrolled = (winScroll / height) * 100;
             document.getElementById('scrollProgress').style.width = scrolled + '%';
 
-            // Navbar background
             const navbar = document.getElementById('navbar');
             if (window.scrollY > 50) {
                 navbar.classList.add('scrolled');
@@ -1371,7 +640,6 @@
                 navbar.classList.remove('scrolled');
             }
 
-            // Fade in animation
             const fadeElements = document.querySelectorAll('.fade-in');
             fadeElements.forEach(element => {
                 const elementTop = element.getBoundingClientRect().top;
@@ -1382,7 +650,6 @@
             });
         });
 
-        // Initialize fade elements
         document.addEventListener('DOMContentLoaded', () => {
             const fadeElements = document.querySelectorAll('.fade-in');
             fadeElements.forEach(element => {
@@ -1394,61 +661,6 @@
             });
         });
 
-        // Language Switcher
-        function setLang(lang) {
-            currentLang = lang;
-            const t = translations[lang];
-            
-            // Update lang buttons
-            document.querySelectorAll('.lang-btn').forEach(btn => {
-                btn.classList.remove('active');
-                if (btn.textContent.toLowerCase().includes(lang === 'ar' ? 'عرب' : lang === 'en' ? 'en' : '中文')) {
-                    btn.classList.add('active');
-                }
-            });
-
-            // Update text content
-            document.querySelectorAll('[data-key]').forEach(el => {
-                const key = el.getAttribute('data-key');
-                if (t[key]) {
-                    if (key === 'heroTitle') {
-                        el.innerHTML = t[key];
-                    } else {
-                        el.textContent = t[key];
-                    }
-                }
-            });
-
-            // Update direction
-            document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
-            document.documentElement.lang = lang;
-        }
-
-        // Theme Switcher
-        function setTheme(themeName) {
-            document.body.className = themeName;
-            
-            // Update active state
-            document.querySelectorAll('.theme-option').forEach(opt => {
-                opt.classList.remove('active');
-                if (opt.onclick.toString().includes(themeName)) {
-                    opt.classList.add('active');
-                }
-            });
-        }
-
-        // Admin Panel Toggle
-        function toggleAdmin() {
-            const panel = document.getElementById('adminPanel');
-            const overlay = document.getElementById('adminOverlay');
-            panel.classList.toggle('open');
-            overlay.classList.toggle('open');
-        }
-
-        // Close admin on overlay click
-        document.getElementById('adminOverlay').addEventListener('click', toggleAdmin);
-
-        // Portfolio Filter
         function filterPortfolio(category) {
             const items = document.querySelectorAll('.portfolio-item');
             const buttons = document.querySelectorAll('.filter-btn');
@@ -1467,7 +679,6 @@
             });
         }
 
-        // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -1477,15 +688,7 @@
                 }
             });
         });
-
-        // Mobile menu toggle
-        function toggleMobileMenu() {
-            const navLinks = document.getElementById('navLinks');
-            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-        }
     </script>
+
 </body>
-
 </html>
-
-
